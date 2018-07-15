@@ -1,12 +1,12 @@
 import numpy as np
 from scipy.special import expit
 
-# use Newton's method or steepest ascent algorithm
+# uses Newton's method or steepest ascent algorithm
 # returns 1 or -1
 def logistic(X_train, y_train, X_test, iter, Newtons_methos=False):
     weights = np.zeros_like(X_train[0]).T
     l = []
-    if(Newtons_method):
+    if(Newtons_methos):
         for t in range(iter):
             delta = 1/np.sqrt(t+2)
             #sigmoid = y_train * X_train.dot(weights)
